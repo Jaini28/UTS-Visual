@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{0E254F85-ABC3-4AD4-A729-FFAB7AF087B9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="fiture_satuan.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\ADVAN\OneDrive\Dokumen\Embarcadero\Studio\Projects\fiture_member.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="fiture_satuan">
+        <MSBuild Projects="fiture_satuan.dproj"/>
+    </Target>
+    <Target Name="fiture_satuan:Clean">
+        <MSBuild Projects="fiture_satuan.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="fiture_satuan:Make">
+        <MSBuild Projects="fiture_satuan.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="fiture_member">
+        <MSBuild Projects="C:\Users\ADVAN\OneDrive\Dokumen\Embarcadero\Studio\Projects\fiture_member.dproj"/>
+    </Target>
+    <Target Name="fiture_member:Clean">
+        <MSBuild Projects="C:\Users\ADVAN\OneDrive\Dokumen\Embarcadero\Studio\Projects\fiture_member.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="fiture_member:Make">
+        <MSBuild Projects="C:\Users\ADVAN\OneDrive\Dokumen\Embarcadero\Studio\Projects\fiture_member.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="fiture_satuan;fiture_member"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="fiture_satuan:Clean;fiture_member:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="fiture_satuan:Make;fiture_member:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,107 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 442
+  ClientWidth = 628
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object lblNama: TLabel
+    Left = 128
+    Top = 51
+    Width = 36
+    Height = 15
+    Caption = 'NAMA'
+  end
+  object lblDiskripsi: TLabel
+    Left = 128
+    Top = 99
+    Width = 50
+    Height = 15
+    Caption = 'DISKRIPSI'
+  end
+  object edtNama: TEdit
+    Left = 200
+    Top = 48
+    Width = 209
+    Height = 23
+    TabOrder = 0
+  end
+  object edtDiskripsi: TEdit
+    Left = 200
+    Top = 96
+    Width = 209
+    Height = 23
+    TabOrder = 1
+  end
+  object btnSimpan: TButton
+    Left = 128
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'SIMPAN'
+    TabOrder = 2
+    OnClick = btnSimpanClick
+  end
+  object btnEdit: TButton
+    Left = 216
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'EDIT'
+    TabOrder = 3
+  end
+  object btnHapus: TButton
+    Left = 305
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'HAPUS'
+    TabOrder = 4
+    OnClick = btnHapusClick
+  end
+  object btnBatal: TButton
+    Left = 416
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'BATAL'
+    TabOrder = 5
+    OnClick = btnBatalClick
+  end
+  object dbgrd1: TDBGrid
+    Left = 128
+    Top = 192
+    Width = 363
+    Height = 145
+    DataSource = Form1.DataSource1
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nama'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'diskripsi'
+        Visible = True
+      end>
+  end
+end

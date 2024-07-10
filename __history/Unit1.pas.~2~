@@ -1,0 +1,23 @@
+unit Unit1;
+
+interface
+
+uses
+  SysUtils, Classes, ZConnection, ZDataset, DB;
+
+type
+  TDataModule1 = class(TDataModule)
+    ZConnection1: TZConnection;
+    ZQuery1: TZQuery;
+    DataSource1: TDataSource;
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{$R *.dfm}
+
+end.
+
